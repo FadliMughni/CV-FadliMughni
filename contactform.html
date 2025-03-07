@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .radio-group input[type="radio"] {
+            transform: scale(1.2); /* Perbesar ukuran */
+            width: 20px;  /* Bisa diatur sesuai kebutuhan */
+            height: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Contact Form</h2>
+        <form action="Thankyou.html" method="GET">
+            <label>Nama:</label>
+            <input type="text" name="nama" required>
+
+            <label>No Hp/WA:</label>
+            <input type="text" name="no_hp" required>
+
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" id="male" value="Laki-Laki" required>
+                <label for="male">Laki-Laki</label>
+                <input type="radio" name="gender" id="female" value="Perempuan" required>
+                <label for="female">Perempuan</label>
+            </div>
+
+            <label>Pendidikan:</label>
+            <select name="pendidikan">
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
+                <option value="SMA">SMA</option>
+                <option value="Kuliah">Kuliah</option>
+            </select>
+
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+
+            <label>Keperluan:</label>
+            <textarea name="keperluan" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="window.location.reload();">RESET</button>
+            <button type="button" onclick="window.history.back();">BACK</button>
+        </form>
+    </div>
+
+</body>
+</html>
